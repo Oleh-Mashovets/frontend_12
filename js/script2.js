@@ -16,9 +16,9 @@ function activeTraffic() {
         }
     
         light[count].classList.add(light[count].getAttribute('color'));
+
     }, 5000);
 };
-refresh.disabled = false;
 
 refresh.addEventListener('click', () => {
     clearInterval(interval);
@@ -32,17 +32,15 @@ refresh.addEventListener('click', () => {
         if (counter > 0) {
             light[count].classList.remove(light[count].getAttribute('color'));
             light[0].classList.add(light[0].getAttribute('color'));
-            return refresh.disabled = true;
-        }
-        else {
+        } else {
             clearInterval(countPointer);
             light[0].classList.remove(light[0].getAttribute('color'));
-            return refresh.disabled = false;
+            light[1].classList.add(light[1].getAttribute('color'));
         }
     }, 1000);
-
-    setTimeout(() => {
+    
+    const out = setTimeout(() => {
         count = 0;
-        activeTraffic(); 
-    }, 5000);
+        activeTraffic();
+    }, 10000);
 })
