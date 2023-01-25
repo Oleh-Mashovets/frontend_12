@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="traffic__light">
+    <div class="circle red__light" color="red__light"></div>
+    <div class="circle" color="yellow__light"></div>
+    <div class="circle" color="green__light"></div>
+</div>
+<div class="count">
+    <button class="count__btn" id="btn">walk</button>
+    <p class="count__num"></p>
+</div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+<!-- const circles = document.querySelectorAll('.block-inner__circle');
+console.log(circles);
+const btnWalk = document.getElementById('btn__walk');
+console.log(btnWalk);
+
+const blockText = document.querySelector('.block__text');
+let activeLight = 0;
+setInterval(() => { // каждые 5 секунд запускаю функцию
+  changeLight();
+}, 1000);
+
+function changeLight() { // меняем цвет
+  circles[activeLight].className = 'block-inner__circle'; // каждому circle из массива присваем класс
+  activeLight++; // увеличиваем на одну единицу(проходим по всем)
+
+  if (activeLight > 2) { // если больше 2
+    activeLight = 0; // то 0(первый circle)
+  }
+
+  const currentLight = circles[activeLight]; // присваем в константу все наши элементы из массива
+  currentLight.classList.add(currentLight.getAttribute("color")); // добавляем класс из атрибута color
+}
+
+let counter = 10;
+btnWalk.addEventListener('click', () => {
+  currentLight = circles[0];
+  currentLight.classList.add(currentLight.getAttribute("color"));
+
+  setInterval(() => {
+    if (counter === 0) {
+      return;
+    }
+    counter -= 1;
+    blockText.innerHTML = `Counts: ${counter}`;
+  }, 1000)
+}) -->
